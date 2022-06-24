@@ -33,3 +33,48 @@ a {
 a:hover {
     background-color: #141414;
 }
+
+#title {
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 4px solid #141414;
+    border-bottom: 4px solid #141414;
+    border-collapse: collapse;
+}
+
+table {
+    width: 98%;
+    table-layout: fixed;
+    text-align: center;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+#header td {
+    line-height: 36px;
+}
+
+td {
+    background-color: #000;
+    line-height: 25px;
+}
+
+tr {
+    color: white;
+    background: #000;
+}
+
+#header td {
+    color: white;
+}
+
+td:nth-child(8n), td:nth-child(8n+7) {
+    color: yellow;
+}
