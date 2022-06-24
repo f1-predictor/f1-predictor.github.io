@@ -7,19 +7,19 @@
 }
 
 #navbar {
-    background-color: #000;
+    background-color: black;
     height: 57px;
     border-top: 1px solid red;
     border-bottom: 2px solid red;
 }
 
 #logo {
-    background-color: #000;
+    background-color: black;
     height: 57px;
 }
 
 a {
-    background-color: #000;
+    background-color: black;
     line-height: 57px;
     float: right;
     text-align: center;
@@ -59,6 +59,7 @@ table {
 
 #header td {
     line-height: 36px;
+    color: white;
 }
 
 td {
@@ -66,15 +67,11 @@ td {
     line-height: 25px;
 }
 
+td:nth-child(8n), td:nth-child(8n+7) {
+    color: yellow;
+}
+
 tr {
     color: white;
     background: #000;
-}
-
-#header td {
-    color: white;
-}
-
-td:nth-child(8n), td:nth-child(8n+7) {
-    color: yellow;
 }
