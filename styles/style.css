@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    background-color: #141414;
+}
+
+#navbar {
+    background-color: #000;
+    height: 57px;
+    border-top: 1px solid red;
+    border-bottom: 2px solid red;
+}
+
+#logo {
+    background-color: #000;
+    height: 57px;
+}
+
+a {
+    background-color: #000;
+    line-height: 57px;
+    float: right;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0px 25px;
+    border-left: 1px solid red;
+}
+
+a:hover {
+    background-color: #141414;
+}
