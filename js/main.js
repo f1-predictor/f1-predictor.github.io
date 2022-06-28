@@ -1,11 +1,13 @@
+const API_URL = "http://localhost:8080/";
+
 function lastResults() {
-    fetch("http://localhost:8080/last_results")
+    fetch(API_URL + "last_results")
         .then(response => response.json())
         .then(data => loadTable(data));
 }
 
 function getResults(year, track) {
-    fetch("http://localhost:8080/results?year=" + year + "&track=" + track)
+    fetch(API_URL + "results?year=" + year + "&track=" + track)
         .then(response => response.json())
         .then(data => loadTable(data));
 }
