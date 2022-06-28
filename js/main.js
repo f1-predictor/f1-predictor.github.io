@@ -4,8 +4,13 @@ function lastResults() {
         .then(data => loadTable(data));
 }
 
+function getResults(year, track) {
+    fetch("http://localhost:8080/results?year=" + year + "&track=" + track)
+        .then(response => response.json())
+        .then(data => loadTable(data));
+}
+
 function loadTable(data) {
-    console.log(data);
     var table = document.getElementById("results_table");
     var p1 = data["js-practice-1"];
     var p2 = data["js-practice-2"];
@@ -15,14 +20,12 @@ function loadTable(data) {
 
     for (i = 0; i < placements.length; i++) {
         var driver = placements[i];
-        console.log(driver);
         var p1_time = p1[driver];
         var p2_time = p2[driver];
         var p3_time = p3[driver];
         var q_time = q[driver];
 
         var values = [i+1, driver, p1_time, p2_time, p3_time, q_time, "---", "---"];
-        console.log(values);
 
         var row = document.createElement("tr");
         for (j = 0; j < values.length; j++) {
