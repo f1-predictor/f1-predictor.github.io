@@ -28,6 +28,7 @@ a {
     font-size: 17px;
     padding: 0px 25px;
     border-left: 1px solid red;
+    cursor: pointer;
 }
 
 a:hover {
