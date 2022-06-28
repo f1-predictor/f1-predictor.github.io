@@ -3,22 +3,25 @@ const API_URL = "http://localhost:8080/";
 function lastResults() {
     fetch(API_URL + "last_results")
         .then(response => response.json())
-        .then(data => loadTable(data));
+        .then(data => loadTable("Last Results and Predictions: ", data));
 }
 
 function getResults(year, track) {
     fetch(API_URL + "results?year=" + year + "&track=" + track)
         .then(response => response.json())
-        .then(data => loadTable(data));
+        .then(data => loadTable("Results and Predictions: ", data));
 }
 
-function loadTable(data) {
+function loadTable(pre_title, data) {
     var table = document.getElementById("results_table");
     var p1 = data["js-practice-1"];
     var p2 = data["js-practice-2"];
     var p3 = data["js-practice-3"];
     var q = data["js-qualifying"];
     var placements = data["placements"];
+
+    var title = document.getElementById("title");
+    title.innerHTML = pre_title + data["track-name"];
 
     for (i = 0; i < placements.length; i++) {
         var driver = placements[i];
