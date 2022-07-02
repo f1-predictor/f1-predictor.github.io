@@ -1,5 +1,20 @@
 const API_URL = "http://localhost:8080/";
 
+function loadPage() {
+    loadRounds();
+    lastResults();
+}
+
+function loadRounds() {
+    fetch(API_URL + "get_rounds")
+        .then(response => response.json())
+        .then(data => loadDropdown(data));
+}
+
+function loadDropdown(data) {
+    console.log(data);
+}
+
 function lastResults() {
     fetch(API_URL + "last_results")
         .then(response => response.json())
