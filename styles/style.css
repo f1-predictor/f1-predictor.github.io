@@ -15,10 +15,14 @@
 
 #logo {
     background-color: black;
-    height: 57px;
+    height: 54px;
 }
 
-a {
+.nav-image {
+    background-color: black;
+}
+
+.nav-item {
     background-color: black;
     line-height: 57px;
     float: right;
@@ -31,7 +35,7 @@ a {
     cursor: pointer;
 }
 
-a:hover {
+.nav-item:hover {
     background-color: #141414;
 }
 
